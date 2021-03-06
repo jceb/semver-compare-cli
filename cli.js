@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // LICENSE: MIT
 // Copyright (C) 2021 Jan Christoph Ebersbach. All rights reserved.
-'use strict';
+"use strict";
+
+const cmp = require("semver-compare");
 
 const stripV = (s) => s.replace(/^v/, "");
 const isVersion = (s) => s.match(/^v?[0-9]+(\.[0-9]+)*/) !== null;
