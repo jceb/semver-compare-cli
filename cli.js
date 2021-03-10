@@ -4,6 +4,7 @@
 "use strict";
 
 const cmp = require("semver-compare");
+const VERSION = require("./package.json").version;
 
 const stripV = (s) => s.replace(/^v/, "");
 const isVersion = (s) => s.match(/^v?[0-9]+(\.[0-9]+)*/) !== null;
@@ -18,7 +19,10 @@ const cmp_predicates = {
   lt: _comp([-1]),
 };
 
-if (
+if (process.argv.length === 3 && ['-v', '--version'].includes(process.argv[2])) {
+  console.log(VERSION);
+  process.exit(0);
+} else if (
   ![4, 5].includes(process.argv.length) ||
   !testArgs(process.argv.slice(-2)) ||
   (process.argv.length === 5 &&
