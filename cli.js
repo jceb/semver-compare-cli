@@ -19,7 +19,9 @@ const cmp_predicates = {
   lt: _comp([-1]),
 };
 
-if (process.argv.length === 3 && ['-v', '--version'].includes(process.argv[2])) {
+if (
+  process.argv.length === 3 && ["-v", "--version"].includes(process.argv[2])
+) {
   console.log(VERSION);
   process.exit(0);
 } else if (
@@ -30,16 +32,20 @@ if (process.argv.length === 3 && ['-v', '--version'].includes(process.argv[2])) 
 ) {
   console.log(`Reveived: semver-compare ${process.argv.slice(2).join(" ")}`);
   console.log(
-    `Usage: semver-compare [${Object.keys(cmp_predicates).join(
-      "|"
-    )}] VERSION1 VERSION2`
+    `Usage: semver-compare [${
+      Object.keys(cmp_predicates).join(
+        "|",
+      )
+    }] VERSION1 VERSION2`,
   );
   console.log("Without predicate:");
   console.log("\texit code 0 if versions are equal");
   console.log("\texit code 1 if first versions is higher");
   console.log("\texit code 2 if first versions is lower");
   console.log(`With predicate [${Object.keys(cmp_predicates).join("|")}]:`);
-  console.log("\texit code 0 if predicate applies comparing VERSION1 to VERSION2");
+  console.log(
+    "\texit code 0 if predicate applies comparing VERSION1 to VERSION2",
+  );
   console.log("\texit code 1 if predicate doesn't apply");
   console.log("exit code 3 if an error occurs");
   process.exit(3);
@@ -54,6 +60,9 @@ if (process.argv.length === 4) {
     exitcode = 2;
   }
 } else {
-  exitcode = cmp_predicates[process.argv[2]](...versions) ? 0 : 1;
+  let i = 0;
+  for (i = 0; i < 10000000; i++) {
+    exitcode = cmp_predicates[process.argv[2]](...versions) ? 0 : 1;
+  }
 }
 process.exit(exitcode);

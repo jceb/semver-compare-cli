@@ -4,9 +4,9 @@
 
 CLI wrapper of the semver-compare library
 
-Compare two semver version strings on the command line. The exit code is
-0 (equal), 1 (greater), or 2 (smaller). In addition, a predicate can be
-added that's applied when comparing the two version.
+Compare two semver version strings on the command line. The exit code is 0
+(equal), 1 (greater), or 2 (smaller). In addition, a predicate can be added
+that's applied when comparing the two version.
 
 The project is a wrapper around the
 [semver-compare](https://github.com/substack/semver-compare) library.
@@ -29,15 +29,14 @@ yarn global add semver-compare-cli
 
 ### Direct comparison
 
-For a direct comparison of two versions the following exit codes are
-possible:
+For a direct comparison of two versions the following exit codes are possible:
 
 - `0` versions are equal
 - `1` the first version is larger than the second version
 - `2` the first version is smaller than the second version
 
-Example, exit code is `2` because the first version is smaller than the
-second version:
+Example, exit code is `2` because the first version is smaller than the second
+version:
 
 ```
 semver-compare 1.0.0 1.0.1
@@ -58,8 +57,8 @@ The following predicates are supported:
 - `le`: lower than or equal
 - `lt`: lower than
 
-Example, exit code is `1` because the first version is smaller than the
-second version:
+Example, exit code is `1` because the first version is smaller than the second
+version:
 
 ```
 semver-compare ge 1.0.0 1.0.1
@@ -73,7 +72,8 @@ semver-compare ge 1.0.0 1.0.1
 
 PRs accepted.
 
-Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+Small note: If editing the README, please conform to the
+[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
