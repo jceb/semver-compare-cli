@@ -21,8 +21,16 @@ The project is a wrapper around the
 
 ## Install
 
+Install via npm:
+
 ```
 yarn global add semver-compare-cli
+```
+
+or use [deno](https://deno.land) to run it without installation:
+
+```
+https://cdn.deno.land/semver_compare_cli/versions/v1.0.4/raw/cli-deno.js
 ```
 
 ## Usage
