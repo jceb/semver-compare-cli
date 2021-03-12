@@ -30,7 +30,7 @@ yarn global add semver-compare-cli
 or use [deno](https://deno.land) to run it without installation:
 
 ```
-deno run https://cdn.deno.land/semver_compare_cli/versions/v1.0.4/raw/cli-deno.js
+deno run https://cdn.deno.land/semver_compare_cli/versions/v1.0.5/raw/cli-deno.js
 ```
 
 ## Usage
