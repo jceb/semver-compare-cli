@@ -30,7 +30,7 @@ yarn global add semver-compare-cli
 or use [deno](https://deno.land) to run it without installation:
 
 ```
-deno run https://cdn.deno.land/semver_compare_cli/versions/v1.0.6/raw/semver-compare.js
+deno run https://cdn.deno.land/semver_compare_cli/versions/v2.0.0/raw/semver-compare.js
 ```
 
 ## Usage
@@ -57,7 +57,8 @@ For a comparison with a predicate the following exit codes are possible:
 - `0` predicate applies to the comparison of the two version
 - `1` predicate doesn't apply
 
-The following predicates are supported:
+The following predicates are supported that shall be placed between the
+two version numbers:
 
 - `eq`: equal
 - `ge`: greater than or equal
@@ -69,7 +70,7 @@ Example, exit code is `1` because the first version is smaller than the second
 version:
 
 ```
-semver-compare ge 1.0.0 1.0.1
+semver-compare 1.0.0 ge 1.0.1
 ```
 
 ## Maintainers
