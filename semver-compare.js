@@ -6,6 +6,8 @@ import semverCompare from "https://cdn.skypack.dev/semver-compare?dts";
 import sanctuary from "https://cdn.skypack.dev/sanctuary?dts";
 const S = sanctuary;
 
+const VERSION = "2.0.1"
+
 const stripV = (s) => s.replace(/^v/, "");
 const isVersion = (s) => s.match(/^v?[0-9]+(\.[0-9]+)*/) !== null;
 const testArgs = (a) => a.reduce((acc, s) => acc && isVersion(s), true);
